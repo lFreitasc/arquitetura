@@ -5,11 +5,9 @@ import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,7 +20,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity
 public class Professor implements Serializable{
-
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long idProfessor;
@@ -32,6 +29,7 @@ public class Professor implements Serializable{
     private Cargo Cargo;
     @ManyToOne
     private Departamento idDepartamento;
- 
+
+  
         
 }
