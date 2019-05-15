@@ -3,11 +3,14 @@ package br.utfpr.architecture.Entity;
 
 import java.io.Serializable;
 import java.util.Set;
+import javax.persistence.Column;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,7 +23,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity
 public class AulasDoPlanoSubstituicao implements Serializable {
-    @Id @GeneratedValue
+    @Id 
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long idAulaPlanoSubstituicao;
     private String dataDaAulaSubstituida;
     private String horaDaAulaProposta;
@@ -28,9 +32,13 @@ public class AulasDoPlanoSubstituicao implements Serializable {
     private String quantidadeDeAulas;
     private String quantidadeTotaldeAulas;
 
-    private Long idPlanoDeAula;
-    private Long idProfessorSubstituto;
-    private Long idTurma;
+    @OneToOne
+    private SolicitacaoPlanoDeSubstituicao idPlanoDeAula;
+    @ManyToOne
+    @Column(name = "idProfessor")    
+    private Professor idProfessorSubstituto;
+    @ManyToOne
+    private Turma idTurma;
     
     
    

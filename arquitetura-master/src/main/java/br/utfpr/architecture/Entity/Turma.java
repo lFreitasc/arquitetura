@@ -6,8 +6,10 @@ import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,11 +22,18 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity
 public class Turma implements Serializable {
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idTurma;
     private String nomeTurma;
-    private String idCurso;
-    private String idDisciplina;
-    private String idSala;
+    
+    @ManyToOne
+    @JoinColumn
+    private Curso idCurso;
+    @ManyToOne
+    @JoinColumn
+    private Disciplina idDisciplina;
+    @ManyToOne
+    @JoinColumn
+    private Sala idSala;
     
 }
