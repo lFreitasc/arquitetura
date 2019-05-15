@@ -2,15 +2,11 @@ package br.utfpr.architecture.Entity;
 
 import java.io.Serializable;
 import java.util.Set;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,17 +17,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Professor implements Serializable{
-
-    @Id 
-    @GeneratedValue(strategy = GenerationType.IDENTITY) 
-    private Long idProfessor;
-    private String nome;
+public class Class implements Serializable{
+    @Id @GeneratedValue
+    private Long id;
     
+    @ManyToMany
+    private Set<Student> alunos;
+
     @ManyToOne
-    private Cargo Cargo;
-    @ManyToOne
-    private Departamento idDepartamento;
- 
-        
-}
+    private Professor professor;
+ }
