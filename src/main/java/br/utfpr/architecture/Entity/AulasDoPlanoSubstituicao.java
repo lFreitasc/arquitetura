@@ -36,7 +36,7 @@ public class AulasDoPlanoSubstituicao implements Serializable {
 
 
     @ManyToOne
-    private Turma idTurma;
+    private Turma turma;
     
     
    
