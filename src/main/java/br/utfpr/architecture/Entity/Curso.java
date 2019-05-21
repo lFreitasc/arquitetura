@@ -26,7 +26,7 @@ public class Curso implements Serializable {
     private String nomeCurso;
     @ManyToOne
     @JoinColumn
-    private Departamento idDepartamento;
+    private Departamento departamento;
     
     
 }

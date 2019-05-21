@@ -29,14 +29,15 @@ public class SolicitacaoPlanoDeSubstituicao implements Serializable {
     private String parecerCoordenacao;
     private String observacao;
     private boolean aprovado;
-    @Column(name = "idProfessor")
+    
+    
     @ManyToOne
-    private Professor idProfessorRequerente;
-    @Column(name = "idProfessor")
+    private Professor professorRequerente;
+    
     @ManyToOne
-    private Professor idProfessorSubstituto;
-    @Column(name = "idProfessor")
+    private Professor professorSubstituto;
+    
     @ManyToOne
-    private Professor idProfessorCoordenador;
+    private Professor professorCoordenador;
    
 }

@@ -30,7 +30,7 @@ public class Professor implements Serializable{
     @ManyToOne
     private Cargo Cargo;
     @ManyToOne
-    private Departamento idDepartamento;
+    private Departamento departamento;
  
         
 }

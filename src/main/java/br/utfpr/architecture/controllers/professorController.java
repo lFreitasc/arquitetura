@@ -8,7 +8,7 @@ import br.utfpr.architecture.Entity.AulasDoPlanoSubstituicao;
 public class professorController {
     
     public void solicitarSubstituicao(){
-        AulasDoPlanoSubstituicao aulasDoPlanoSubstituicao =  new AulasDoPlanoSubstituicao();
-        
+        // AulasDoPlanoSubstituicao aulasDoPlanoSubstituicao = 
+
     }
 }

@@ -27,16 +27,16 @@ public class AulasDoPlanoSubstituicao implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long idAulaPlanoSubstituicao;
     private String dataDaAulaSubstituida;
-    private String horaDaAulaProposta;
-    private String horarioAulaProposta;
     private String quantidadeDeAulas;
-    private String quantidadeTotaldeAulas;
 
     @OneToOne
-    private SolicitacaoPlanoDeSubstituicao idPlanoDeAula;
-    @ManyToOne
-    @Column(name = "idProfessor")    
-    private Professor idProfessorSubstituto;
+    private SolicitacaoPlanoDeSubstituicao planoDeAula;
+
+
+    @ManyToOne    
+    private Professor professorSubstituto;
+
+
     @ManyToOne
     private Turma idTurma;
     
