@@ -2,7 +2,7 @@ package br.utfpr.architecture.models;
 
 import java.util.Set;
 
-import br.utfpr.architecture.DAO.SolicitarSubstituicaoDAO;
+import br.utfpr.architecture.DAO.SubstituicaoDAO;
 import br.utfpr.architecture.Entity.Alunos;
 import br.utfpr.architecture.Entity.Anuencia;
 import br.utfpr.architecture.Entity.Coordenador;

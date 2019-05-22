@@ -7,4 +7,4 @@ import br.utfpr.architecture.Entity.Anuencia;
 /**
  * anuenciaDAO
  */
-public interface anuenciaDAO extends JpaRepository<Anuencia, Long>{}
+public interface AnuenciaDAO extends JpaRepository<Anuencia, Long>{}
