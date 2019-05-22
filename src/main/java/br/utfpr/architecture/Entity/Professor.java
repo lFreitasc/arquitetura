@@ -1,7 +1,6 @@
 package br.utfpr.architecture.Entity;
 
 import java.io.Serializable;
-import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,7 +30,7 @@ public class Professor implements Serializable{
     @ManyToOne
     private Cargo Cargo;
     @ManyToOne
-    private Departamento idDepartamento;
+    private Departamento departamento;
  
         
 }

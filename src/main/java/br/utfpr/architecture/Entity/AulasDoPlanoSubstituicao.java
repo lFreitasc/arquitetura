@@ -2,8 +2,6 @@ package br.utfpr.architecture.Entity;
 
 
 import java.io.Serializable;
-import java.util.Set;
-import javax.persistence.Column;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,18 +25,18 @@ public class AulasDoPlanoSubstituicao implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long idAulaPlanoSubstituicao;
     private String dataDaAulaSubstituida;
-    private String horaDaAulaProposta;
-    private String horarioAulaProposta;
     private String quantidadeDeAulas;
-    private String quantidadeTotaldeAulas;
 
-    @OneToOne
-    private SolicitacaoPlanoDeSubstituicao idPlanoDeAula;
+       @ManyToOne    
+    private Professor professorSubstituto;
+
+
     @ManyToOne
-    @Column(name = "idProfessor")    
-    private Professor idProfessorSubstituto;
-    @ManyToOne
-    private Turma idTurma;
+    private Turma turma;
+
+    public AulasDoPlanoSubstituicao(String homesecundaria) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
    

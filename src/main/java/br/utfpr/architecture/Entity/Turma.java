@@ -2,7 +2,6 @@ package br.utfpr.architecture.Entity;
 
 
 import java.io.Serializable;
-import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,12 +27,12 @@ public class Turma implements Serializable {
     
     @ManyToOne
     @JoinColumn
-    private Curso idCurso;
+    private Curso curso;
     @ManyToOne
     @JoinColumn
-    private Disciplina idDisciplina;
+    private Disciplina disciplina;
     @ManyToOne
     @JoinColumn
-    private Sala idSala;
+    private Sala sala;
     
 }

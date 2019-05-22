@@ -2,7 +2,6 @@ package br.utfpr.architecture.Entity;
 
 
 import java.io.Serializable;
-import javax.persistence.Column;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,14 +28,29 @@ public class SolicitacaoPlanoDeSubstituicao implements Serializable {
     private String parecerCoordenacao;
     private String observacao;
     private boolean aprovado;
-    @Column(name = "idProfessor")
+    
+    
     @ManyToOne
-    private Professor idProfessorRequerente;
-    @Column(name = "idProfessor")
+    private Professor professorRequerente;
+    
     @ManyToOne
-    private Professor idProfessorSubstituto;
-    @Column(name = "idProfessor")
+    private Professor professorSubstituto;
+    
     @ManyToOne
-    private Professor idProfessorCoordenador;
+    private Professor professorCoordenador;
+    @ManyToOne
+    private AulasDoPlanoSubstituicao aulasDoPlanoSubstituicao;
+
+    public SolicitacaoPlanoDeSubstituicao(String homeprincipal) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @java.lang.SuppressWarnings(value = "all")
+    public static class SolicitacaoPlanoDeSubstituicaoBuilder {
+
+        public void idPlanoDeAula(int i) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    }
    
 }
