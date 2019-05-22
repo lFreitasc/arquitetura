@@ -1,14 +1,14 @@
 package br.utfpr.architecture.controllers;
 
-import br.utfpr.architecture.Entity.AulasDoPlanoSubstituicao;
+import br.utfpr.architecture.DAO.SolicitarSubstituicaoDAO;
+import br.utfpr.architecture.Entity.SolicitarSubstituicao;
 
 /**
  * professorController
  */
-public class professorController {
-    
-    public void solicitarSubstituicao(){
-        // AulasDoPlanoSubstituicao aulasDoPlanoSubstituicao = 
+public class ProfessorController {
 
+    public void solicitarSubstituicao(SolicitarSubstituicao solicitarSubstituicao) {
+        
     }
 }

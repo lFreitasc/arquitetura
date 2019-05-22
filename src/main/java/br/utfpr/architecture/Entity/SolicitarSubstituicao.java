@@ -1,14 +1,15 @@
 package br.utfpr.architecture.Entity;
 
-
 import java.io.Serializable;
+import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,24 +21,25 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-public class AulasDoPlanoSubstituicao implements Serializable {
+public class SolicitarSubstituicao implements Serializable {
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
-    private Long idAulaPlanoSubstituicao;
-    private String dataDaAulaSubstituida;
-    private String quantidadeDeAulas;
+    private Long idPlanoDeAula;
+    
+    private boolean aprovado;
 
-    @OneToOne
-    private SolicitacaoPlanoDeSubstituicao planoDeAula;
-
-
-    @ManyToOne    
-    private Professor professorSubstituto;
-
-
+    @Temporal (TemporalType.DATE)
+    private Date dataSolicitacao;
+    @Temporal (TemporalType.DATE)
+    private Date dateSsubstituicao;
+    
     @ManyToOne
-    private Turma turma;
+    private Professor requerente;
     
+    @ManyToOne
+    private Professor substituto;
     
+    @ManyToOne
+    private Coordenador coordenador;
    
 }
