@@ -1,29 +1,33 @@
 package br.utfpr.architecture.Entity;
 
 import java.io.Serializable;
-import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Ausencia
+ */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @Entity
-public class Class implements Serializable{
-    @Id @GeneratedValue
-    private Long id;
-    
-    @ManyToMany
-    private Set<Student> alunos;
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Ausencia implements Serializable {
 
-    @ManyToOne
-    private Professor professor;
- }
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @OneToMany
+    Professor professor;
+
+    private String procedimento;
+}
