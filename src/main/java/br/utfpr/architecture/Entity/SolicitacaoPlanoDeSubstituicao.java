@@ -38,10 +38,17 @@ public class SolicitacaoPlanoDeSubstituicao implements Serializable {
     
     @ManyToOne
     private Professor professorCoordenador;
-    @ManyToOne
-    private AulasDoPlanoSubstituicao aulasDoPlanoSubstituicao;
+
 
     public SolicitacaoPlanoDeSubstituicao(String homeprincipal) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setIdPlanoDeAula(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setIdPlanoDeAula(Long idPlanoDeAula) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

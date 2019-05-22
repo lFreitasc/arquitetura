@@ -33,6 +33,9 @@ public class AulasDoPlanoSubstituicao implements Serializable {
 
     @ManyToOne
     private Turma turma;
+    
+    @ManyToOne
+    private SolicitacaoPlanoDeSubstituicao idPlanoDeAula;
 
     public AulasDoPlanoSubstituicao(String homesecundaria) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
