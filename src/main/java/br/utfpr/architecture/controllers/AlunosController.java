@@ -8,7 +8,11 @@ import br.utfpr.architecture.Entity.Anuencia;
  */
 public class AlunosController {
 
-    Alunos aluno = new Alunos();
+    private Alunos alunos;
+
+    public AlunosController(Alunos alunos){
+        this.alunos = alunos;
+    }
 
     private void assinarAnuencia(Anuencia anuencia){
         if(this.aluno.getPresenca() >= 0.75){

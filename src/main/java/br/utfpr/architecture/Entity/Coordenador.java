@@ -1,6 +1,7 @@
 package br.utfpr.architecture.Entity;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,4 +28,5 @@ public class Coordenador implements Serializable{
     private Long id;
     private String nome;
     
+    private Set<SolicitarSubstituicao> solicitacoes;
 }

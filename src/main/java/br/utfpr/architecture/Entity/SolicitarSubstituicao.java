@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.sql.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
@@ -39,6 +40,7 @@ public class SolicitarSubstituicao implements Serializable {
     @ManyToOne
     private Coordenador coordenador;
 
+    @Enumerated (EnumType.STRING)
     private Estados estado;
 
     @OneToOne
