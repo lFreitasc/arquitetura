@@ -1,5 +1,6 @@
 package br.utfpr.architecture.Entity;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -20,7 +21,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Anuencia {
+public class Anuencia implements Serializable {
 
     @Id
     @GeneratedValue

@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-public class SolicitarSubstituicao implements Serializable {
+public class Substituicao implements Serializable {
     @Id 
     @GeneratedValue
     private Long id;
@@ -46,4 +46,6 @@ public class SolicitarSubstituicao implements Serializable {
     @OneToOne
     private Disciplina disciplina;
    
+    @OneToOne
+    private Presenca presenca;
 }

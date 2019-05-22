@@ -28,5 +28,5 @@ public class Coordenador implements Serializable{
     private Long id;
     private String nome;
     
-    private Set<SolicitarSubstituicao> solicitacoes;
+    private Set<Substituicao> solicitacoes;
 }

@@ -1,4 +1,4 @@
-package br.utfpr.architecture.controllers;
+package br.utfpr.architecture.models;
 
 import br.utfpr.architecture.Entity.Alunos;
 import br.utfpr.architecture.Entity.Anuencia;
@@ -19,5 +19,9 @@ public class AlunosController {
             anuencia.getAlunos().add(this.aluno);
         }
         
+    }
+
+    private void assinarPresenca(Presenca presenca){
+        presenca.getPresenca().add(this.alunos);
     }
 }
