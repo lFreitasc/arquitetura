@@ -20,8 +20,8 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Disciplina implements Serializable {
     @Id @GeneratedValue
-    private Long idDisciplina;
-    private String nomeDisciplina;
+    private Long id;
+    private String nome;
 
     @ManyToOne
     Professor professor;

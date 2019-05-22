@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -23,13 +24,9 @@ import lombok.NoArgsConstructor;
 @Entity
 public class SolicitarSubstituicao implements Serializable {
     @Id 
-    @GeneratedValue(strategy = GenerationType.IDENTITY) 
-    private Long idPlanoDeAula;
-    
-    private boolean aprovado;
+    @GeneratedValue
+    private Long id;
 
-    @Temporal (TemporalType.DATE)
-    private Date dataSolicitacao;
     @Temporal (TemporalType.DATE)
     private Date dateSsubstituicao;
     
@@ -41,5 +38,10 @@ public class SolicitarSubstituicao implements Serializable {
     
     @ManyToOne
     private Coordenador coordenador;
+
+    private Estados estado;
+
+    @OneToOne
+    private Disciplina disciplina;
    
 }

@@ -1,9 +1,9 @@
 package br.utfpr.architecture.Entity;
 
-import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
@@ -13,21 +13,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Alunos
+ * anuencia
  */
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+public class Anuencia {
 
- @Data
- @Builder
- @NoArgsConstructor
- @AllArgsConstructor
- @Entity
-public class Alunos implements Serializable{
     @Id
-    private int ra;
-
-    private String nome;
-    private float presenca;
-
+    @GeneratedValue
+    private Long id;
+    
     @ManyToMany
-    private Set<Disciplina> discipinas;
+    private Set<Alunos> alunos;
 }
